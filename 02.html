@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabtechCO</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             list-style: none;
+            text-decoration: none;
+        }
+        :root {
+            --primary-color: #3368c6;
+            --secondary-color: #031b4e;
+            --bg-light: #f6faff;
+            --text-dark: #333;
+            --text-gray: #666;
+            --container-max: 1400px;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部信息栏-----begin */
+        .top {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-left{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 35px;
+            color: var(--primary-color);
+        }
+        .top-left img {
+            height: 50px;
+        }
+        .top-left-text{
+            font-weight: 800;
+            font-size: 35px;
+            color: var(--secondary-color);
+        }
+        .top-right{
+            display: flex;
+            gap: 30px;  
+        }
+        .top .top-right-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .top .top-right-item .icon-circle {
+            width: 45px;
+            height: 45px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .top-right-item img {
+            width: 20px;
+            height: 20px;
+        }
+        .top-right-text{
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .top-right-text :nth-child(1){
+            font-size: 20;
+            color: var(--secondary-color);
+            font-weight: 800;
+        }
+        .top-right-text :nth-child(2){
+            font-size: 12;
+            color: var(--text-gray);
+            font-weight: 100;
+        }
+        @media (max-width: 1399px) {
+            .top .top-right {
+                gap: 25px;
+            }
+        }
+        @media (max-width: 767px) {
+            .top .container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .top .top-right {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .top .top-right-item {
+                justify-content: center;
+            }
+        }
+            /* 头部信息栏-----end */
+            /* 导航栏----begin */   
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-color);
+            height: 66px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 0 0 80px;
+            margin-bottom: -33px;
+            position: relative;
+            z-index: 10;
+        }
+        .nav-menu{
+            display: flex;
+            gap: 30px;
+            color: white;
+            font-size: 16px;
+        }
+        .contact-btn {
+            background: #0a2055;
+            color: #fff;
+            padding: 0 32px;
+            white-space: nowrap;
+            height: 100%;
+            display: flex;
+            align-items: center;
+         }
+         .nav-banner {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-banner h1 {
+            position: absolute;
+            left: 180px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 50px;
+}
+    .banner-right{
+            position: absolute;
+            right: 180px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 16px;
+}
+        @media (max-width: 1399px) {
+            .nav-wrapper {
+                padding: 0 20px 0 40px;
+            }
+            .nav-menu {
+                gap: 20px;
+                font-size: 14px;
+            }
+            .contact-btn {
+                padding: 0 25px;
+                font-size: 14px;
+            }
+            .nav-banner h1 {
+                left: 40px;
+                font-size: 36px;
+            }
+            .banner-right {
+                right: 40px;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 767px) {
+            .nav-wrapper {
+                height: 50px;
+                padding: 0 15px 0 20px;
+                margin-bottom: -25px;
+            }
+            .nav-menu {
+                gap: 10px;
+                font-size: 12px;
+            }
+            .contact-btn {
+                padding: 0 15px;
+                font-size: 12px;
+            }
+            .nav-banner h1 {
+                left: 20px;
+                font-size: 24px;
+            }
+            .banner-right {
+                right: 20px;
+                font-size: 12px;
+            }
+        }
+            /* 导航栏-----end */
+            /* 左图右文---begin */
+        .about{
+            margin: 40px 0 0 0;
+            padding:55px 0;
+        }
+        .about-content{
+            background-color: var(--bg-light);
+            min-height: 400px;
+        }
+        .about .container{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .about .img-box{
+            flex:0 0 650px;
+        }
+        .img-box img{
+             width: 100%;
+            display: block;
+            margin-top: -55px;    
+        }
+        /* 共用 text-box 样式 */
+        .text-box{
+            flex: 1;
+            /* padding-bottom: 40px; */
+        }
+        .text-box span{
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        .text-box span:nth-child(1){
+            font-size: 40px;
+            font-weight: 200;
+        }
+        .text-box p{
+            font-size: 25px;
+            font-weight: 400;
+            display: block;
+            margin: 30px 0 30px 0;
+            color: var(--secondary-color);
+            line-height: 1.1;
+        }
+        .text-box a{
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--primary-color);
+            width: 160px;
+            height: 50px;
+            line-height: 41px;    
+            display: inline-block;
+            text-align: center;
+            border: 2px solid var(--primary-color);   
+           text-decoration: none;
+            background: transparent; 
+        }
+        /* text-box 响应式 */
+        @media (max-width: 1399px) {
+            .about .img-box {
+                flex: 0 0 500px;
+            }
+            .text-box span {
+                font-size: 32px;
+            }
+            .text-box span:nth-child(1) {
+                font-size: 32px;
+            }
+            .text-box p {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 767px) {
+            .about {
+                margin: 30px 0 0 0;
+                padding: 30px 0;
+            }
+            .about-content {
+                min-height:auto;
+            }
+            .about .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .about .img-box {
+                flex: none;
+                width: 100%;
+            }
+            .img-box img {
+                margin-top: -30px;
+            }
+            .text-box {
+                padding: 0 20px;
+            }
+            .text-box span {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            .text-box span:nth-child(1) {
+                font-size: 24px;
+            }
+            .text-box p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .text-box a {
+                font-size: 14px;
+                width: 140px;
+                height: 45px;
+                line-height: 37px;
+            }
+        }
+            /* 左图右文---end */
+            /* 数据卡+地图---begin */
+        .stats{
+            height: 500px;
+            width: 100%;
+            /* background: #3368c6; */
+            display:flex;
+            align-items:flex-start;
+            gap:40px;
+            margin: 0 0 80px 0;
+        }
+        .stats-left{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+        }
+        .stats-right{
+            flex:1;  
+        }
+        .stats-right img{
+            display:block;
+            width: 100%;
+            height: 100%;
+            filter:
+                hue-rotate(50deg) saturate(0.6) brightness(1.2);
+        }
+        .stats-left-top{
+            padding:0 70px 0 170px;
+        }
+        .stats-left-bottom{
+            background-color: var(--primary-color);
+            width: 100%;
+            height: 100%;
+            padding:0 10px 0 170px;
+            display:flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+        }
+        .bottom-text{
+            flex: 1;
+            padding: 30px 0 10px 0;
+        }
+        .stats-grid{
+            flex: 3;
+            display:grid;
+            padding: 10px 140px 50px 10px;
+            box-sizing: border-box;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .stats-num{
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .stats-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        @media (max-width: 1399px) {
+            .stats {
+                height: 450px;
+            }
+            .stats-left-top {
+                padding: 0 40px 0 80px;
+            }
+            .stats-left-bottom {
+                padding: 0 10px 0 80px;
+            }
+            .stats-grid {
+                padding: 10px 80px 40px 10px;
+            }
+            .stats-num {
+                font-size: 32px;
+            }
+        }
+        @media (max-width: 767px) {
+            .stats {
+                height: auto;
+                flex-direction: column;
+                margin: 0 0 40px 0;
+            }
+            .stats-left {
+                flex: none;
+                width: 100%;
+                height: auto;
+            }
+            .stats-right {
+                flex: none;
+                width: 100%;
+            }
+            .stats-right img {
+                height: auto;
+            }
+            .stats-left-top {
+                padding: 30px 20px 20px;
+                text-align: center;
+            }
+            .stats-left-bottom {
+                padding: 20px;
+                height: auto;
+            }
+            .stats-grid {
+                padding: 10px 20px 30px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-num {
+                font-size: 28px;
+            }
+        }
+            /* 数据卡+地图---end */
+        /* 合作伙伴Logo---begin */
+     .partners{
+        height:580px;
+        width: 100%;
+        background-color: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 80px;
+     }
+     .partners-top span{
+        display: block;
+       text-align: center;
+     }
+     .partners-bottom{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        padding: 0 60px;
+        width: 100%;
+        box-sizing: border-box;
+     }
+     @media (max-width: 1399px) {
+        .partners-bottom {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 40px;
+        }
+        .partners {
+            height: 500px;
+        }
+     }
+     @media (max-width: 767px) {
+        .partners-bottom {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 20px;
+            gap: 15px;
+        }
+        .partners {
+            height: auto;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+     }
+   
+     /* 合作伙伴Logo---end */
+       /* CTA横幅---begin */
+       .cta{
+        margin-bottom: 100px;
+       }
+     .cta .container{
+        background: url("图/cta.png") center/cover no-repeat; 
+        width: 100%;
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .cta-content{
+        margin: 0 auto;
+        width: 750px;
+        height: 260px;
+        display: flex;
+        background-color:var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        border-radius: 20px;
+     }
+     .cta-content h2{
+        font-size: 50px;
+        font-weight: 500;
+        padding-top: 30px;
+     }
+     .cta-content p{
+        font-size: 20px;
+        font-weight: 400;
+     }
+     .cta-content a{
+        font-size: 18px;
+        font-weight: 200;
+        width: 180px;
+        height: 50px;
+         border-radius:15px;
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+          border: 2px solid #ffffff;
+        margin-bottom:30px;
+          text-decoration: none;
+          color: #ffffff;
+     }
+     @media (max-width: 1399px) {
+        .cta .container {
+            height: 300px;
+        }
+        .cta-content {
+            width: 600px;
+            height: 220px;
+        }
+        .cta-content h2 {
+            font-size: 40px;
+        }
+        .cta-content p {
+            font-size: 18px;
+        }
+        .cta-content a {
+            font-size: 16px;
+            width: 160px;
+            height: 45px;
+        }
+     }
+     @media (max-width: 767px) {
+        .cta {
+            margin-bottom: 50px;
+        }
+        .cta .container {
+            height: 250px;
+            padding: 0 20px;
+        }
+        .cta-content {
+            width: 100%;
+            height: auto;
+            padding: 30px 20px;
+            border-radius: 15px;
+        }
+        .cta-content h2 {
+            font-size: 28px;
+            padding-top: 0;
+        }
+        .cta-content p {
+            font-size: 15px;
+        }
+        .cta-content a {
+            font-size: 14px;
+            width: 140px;
+            height: 42px;
+            margin-bottom: 0;
+        }
+     }
+     /* CTA横幅---end */
+     /* Footer---begin */
+     footer{
+        height: 500px;
+        width: 100%;
+        background-color: var(--bg-light);
+        display: flex;
+        padding: 0 60px;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+     }
+     /* Footer-content begin */
+     .footer-content{
+        flex: 4;
+        display:grid;
+        grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+        gap: 30px;
+        margin:60px 0 80px 0;
+     }
+     /*标题+链接*/
+     .brand-text{
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--text-gray);
+        margin: 30px 0;
+     }
+     .fa-brands{
+        color: #3368c6;
+        font-size: 24px;
+         margin-right: 20px; /* 图标之间20px间距 */
+}
+    .brand-link{
+        margin-top: 30px;
+    }
+     /* uerful+link */
+     .footer-link{
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--text-gray);
+     }
+     .footer-link ul{
+        list-style: none;
+     }
+     .footer-link ul li{
+        font-size: 15px;
+        margin-top: 24px;
+
+     }
+     .footer-link ul li a{
+        
+        color: var(--text-gray);
+        text-decoration: none;
+     }
+ /* 通用标题 */
+     .link-title{
+        font-size: 30px;
+        font-weight: 800;
+        color: var(--secondary-color);
+     }
+     /* our services1 */
+     /* recent post */
+     .recent-post .post-item{
+
+        margin-top: 20px;
+
+     }
+     .post-item a{
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 30px;
+         color: var(--primary-color);
+     }
+     form{
+        display: flex;
+        margin-top: 35px;
+        width: 360px;
+        height: 44px;
+     }
+     form input{
+        flex: 1;
+        height: 100%;
+        border: none;
+        padding: 0 15px;
+        font-size: 14px;
+        background: #fff;
+     }
+     form input::placeholder{
+        color: #999;
+     }
+     form button{
+        width: 56px;
+        height: 100%;
+        background-color: var(--secondary-color);
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    
+     @media (max-width: 1399px) {
+        form { width: 100%; max-width: 320px; }
+     }
+     @media (max-width: 767px) {
+        form { width: 100%; max-width: none; height: 40px; }
+        form button { width: 48px; font-size: 16px; }
+     }
+     /* Footer-content end */
+     /* 版权信息 */
+     .copyright{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-gray);
+        gap: 20px;
+     }
+
+     /* Footer---end */
+    </style>
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top">   
+        <div class="container">
+            <div class="top-left">
+                <img src="svg/01.svg" alt="LabtechCO">
+                <span class="top-left-text">Labtech</span><span>CO</span>
+            </div>  
+            <div class="top-right">
+                <div class="top-right-item">
+                    <div class="icon-circle">
+                        <img src="svg/02.svg" alt="Telephone">
+                    </div>
+                    <div class="top-right-text">
+                        <span class="on">Telephone</span>
+                        <span class="bottom">+123456789</span>
+                    </div>
+                </div>
+                <div class="top-right-item">
+                    <div class="icon-circle">   
+                        <img src="svg/03.svg" alt="Email">
+                    </div>
+                    <div class="top-right-text">
+                        <span class="on">Email Address</span>
+                        <span class="bottom">info@labtechco.com</span>
+                    </div>
+                </div>
+                <div class="top-right-item">
+                    <div class="icon-circle">
+                        <img src="svg/04.svg" alt="Location">
+                    </div>
+                    <div class="top-right-text">
+                        <span class="on">Office Address</span>
+                        <span class="bottom">12 Tottina NY, USA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container">
+        <div class="nav-wrapper">
+            <!-- 菜单 -->
+                 <ul class="nav-menu">
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li>PRODUCTS</li>
+                    <li>PARTENCSHIP</li>
+                    <li>EVENTS</li>
+                </ul>
+                <!-- 按钮 -->
+            <a href="#" class="contact-btn">CONTACT US</a>
+        </div>
+        </div>
+        <!-- 图片+文字 -->
+        <div class="nav-banner">
+            <div class="banner-bg">
+            <img src="图/001.jpg" alt="nav-bg">
+        </div>
+                <h1>GLOBAL PARTNERS</h1>
+                <div class="banner-right">Home / Global Partners
+                </div>
+            </div>
+    </nav>
+    <!-- 左图右文 -->
+    <section class="about">
+            <div class="about-content">
+                <div class="container">
+        <!-- 图片 -->
+         <div class="img-box">
+            <img src="图/002.avif" alt="办公">
+         </div>
+         <!-- 文字+按钮 -->
+          <div class="text-box">
+            <span>WE ARE TRUSTED BY </span><span>WORLD'S LEADING COMPANIES</span>
+            <p>
+We are redefining the medical supply experience. As a dedicated online store, we combine the depth of a major distributor with the agility of a digital-first platform. Our goal is to make premium healthcare equipment instantly available to professionals worldwide.
+    </p>
+    <a href="#" class="contact-btn">Contact Us</a>
+    </div>
+          </div>
+          </div>
+    </section>
+    <!-- 数据卡+世界地图 -->
+    <section class="stats">
+        <div class="stats-left">
+            <div class="stats-left-top text-box">
+                <span>WE ARE TRUSTED BY </span><span>WORLD'S LEADING COMPANIES</span>
+            </div>
+            <div class="stats-left-bottom">
+                <div class="bottom-text">
+                    <h2>Exercitation ullamcorper suscipit lobortis</h2>
+                    <p>Exercitation ullamcorper suscipit lobortis nisl aliquip ex ea commodo non habent claritatem insitamconse quat duis autem Exercitation.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <span class="stats-num">100</span>
+                        <span class="stats-label">PROFESSIONAL STAFF</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-num">50</span>
+                        <span class="stats-label">ROOMS</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-num">10</span>
+                        <span class="stats-label">STARS COMFORT</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-num">50</span>
+                        <span class="stats-label">YEARS OF EXPERIENCE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-right">
+            <img src="图/地图.png" alt="stats-bg">
+        </div>
+    </section>
+    <!-- 合作伙伴Logo -->
+    <section class="partners">
+        <div class="container">
+            <div class="partners-top text-box">
+                <span>WE EMPLOY THE LATEST </span><span>TECHNOLOGY & COMPANY</span>
+            </div>
+            <div class="partners-bottom">
+               <img src="图/Frame 94.png" alt="">
+               <img src="图/Frame 95.png" alt="">
+               <img src="图/Frame 96.png" alt="">
+               <img src="图/Frame 97.png" alt="">
+               <img src="图/Frame 98.png" alt="">
+               <img src="图/Frame 99.png" alt="">
+               <img src="图/Frame 100.png" alt="">
+               <img src="图/Frame 101.png" alt="">
+               <img src="图/Frame 102.png" alt="">
+               <img src="图/Frame 103.png" alt="">
+            </div>
+            </div>
+    </section>
+    <!-- CTA横幅 -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a customer specification?</h2>
+                <p>17 standard specifications All available for immediate sampling</p>
+                <a href="#">Request a Quote  →</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- 标题+链接 -->
+                <div class="footer-brand">
+                    <div class="logo top-left">
+                    <img src="svg/01.svg" alt="LabtechCO">
+                <span class="top-left-text">Labtech</span><span>CO</span>
+                    </div>
+                    <div class="brand-text">
+                        <p>Laboratories used for scientific research take many forms because of the differing. We provide complete process piping capabilities.</p>
+                    </div>
+                    <div class="brand-link">
+<i class="fa-brands fa-facebook-f"></i>
+  <i class="fa-brands fa-x-twitter"></i>
+  <i class="fa-brands fa-discord"></i>
+  <i class="fa-brands fa-linkedin-in"></i>
+  <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    </div>
+                 <!-- useful+link -->
+                 <div class="footer-link">
+                    <h3 class="link-title">USEFUL LINKS</h3>
+                    <ul>
+                           <li><a href="#">About Us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Our Team</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="#">Research</a></li>
+
+                    </ul>
+                    </div>
+                  <!-- our services -->
+                  <div class="footer-services footer-link">
+                    <h3 class="link-title">OUR SERVICES</h3>
+                    <ul>
+                       <li><a href="#">Scientific</a></li>
+    <li><a href="#">Chemistry</a></li>
+    <li><a href="#">Gemological</a></li>
+    <li><a href="#">Forensic science</a></li>
+    <li><a href="#">Immunology</a></li>
+                    </ul>
+                    </div>
+                   <!-- recent post -->
+                   <div class="footer-recent footer-link">
+                    <h3 class="link-title">RECENT POSTS</h3>
+                    <div class="post-item">
+            <a href="#">Tests with Nursing Implications</a>
+            <p>August 8, 2018</p>
+            </div>
+            <div class="post-item">
+                <a href="#">Methods of the recruitment</a>
+                <p>February 18, 2018</p>
+            </div>
+                    <!-- 邮箱 -->
+                    <form>
+                <input type="email" placeholder="Your email address">
+                <button type="submit">→</button>
+                </form> 
+                 </div>
+            </div>
+            <!-- 版权信息 -->
+             <div class="copyright">
+                <p>Copyright © 2026 LabtechCO. All rights reserved.</p>
+             </div>
+        </div>
+    </footer>
+</body>
+</html>
