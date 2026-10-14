@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function outer(){
+            let a=10
+            function inner(){
+                console.log(a)
+            }
+            return inner
+        }
+        const fut = outer()
+        fut()
+        // 闭包是由内层函数和外层函数的变量组成的，让外部可以访问函数内部的变量
+        // 外层函数的变量在函数执行结束后，仍然保留在内存中。
+        // 直到内层函数执行结束,外层函数的变量就会从内存中消失，
+        // 闭包可以访问到外层函数的变量，即使外层函数已经执行完毕。
+
+        // 闭包的应用  统计函数调用的次数
+        let b=0
+        function count(){
+            b++
+            console.log(`你调用了我${b}次`)
+        }
+        // b是全局变量，容易被修改，容易造成数据污染
+
+        // 解决，数据私有，数据保护
+        function count1(){
+            let i = 0
+            function fn(){
+                i++
+                console.log(`你调用了我${i}次`)
+            }
+            return fn
+        }
+        const c1 = count1()
+        c1()
+        c1()
+
+        // 闭包，i是局部变量，不会被修改
+    </script>
+</body>
+</html>

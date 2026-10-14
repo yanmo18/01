@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         /* 定义标签选择器，通常用于样式全局应用 */
+       div {
+           margin: 10px 0;
+           font-size: large;
+           font-weight: 900;/*粗体字*/
+           font-style: italic;/*斜体字*/
+           line-height: normal;/*行间距*/
+           font: 100%/1.5 'Arial', sans-serif; 
+           /*font属性简写，倾斜，加粗，字体大小（必须）、行高、字体（必须）,设置网页文字公共属性*/
+           /*font-family: Arial, sans-serif;*/ /*字体族，Arial是无衬线字体，sans-serif是无衬线字体族的通用名称*/
+           font-family: 'Courier New', Courier, monospace;
+           /*可书写多个字体，浏览器会从左到右依次查找，直到找到支持的字体为止，最后设置字体族*/
+           font-size: 16px;
+           text-align: center; /*文本居中对齐*/
+           text-indent: 2em; /*文本缩进2个字符*/
+           color: blue; /*文本颜色*/
+           text-decoration: underline; /*文本下划线,overline上划线，line-through删除线，none无下划线,underline下划线*/
+       }
+        /* 定义id选择器，一般配合js使用清除默认行间距 */
+       #red {
+           color: red;
+           font-weight: bold;
+       }
+       .green {
+           color: green;
+           font-weight: bold;
+       }
+       /* 定义类选择器，通常用于样式复用,一个页面中可以有多个相同类名的元素，类名用空格分隔 */
+       * {
+           font-size: 20px;
+       }    
+         /* 通配符选择器，通常用于全局样式 */  
+       /*后代选择器，选择所有div标签下的span标签，包括儿子孙子....*/
+       div span {
+           color: purple; /*紫色文本*/
+           font-style: normal; /*正常字体样式*/
+       }
+       /*子代选择器，选择所有div标签下的直接子元素span标签*/
+       div > span {
+           color: orange; /*橙色文本*/
+       }
+       /*并集选择器，选择所有div标签和span标签*/
+       div, 
+       span,
+       p {
+           font-size: 18px; /*字体大小18px*/
+           color: black; /*黑色文本*/
+       }
+       /*交集选择器，连着写，选择所有div标签和span标签的交集，标签选择器写在前*/
+       div span.blue {
+           font-weight: normal; /*正常字体粗细*/
+           color: gray; /*灰色文本*/
+       }
+         /*伪类-超链接四个状态：链接、已访问、悬停、活动。顺序LVHA，link,visited,hover,active*/
+        a:link {
+              color: blue; /*链接状态文本为蓝色*/
+         }
+          /*伪类选择器，选择所有链接的悬停状态,任何标签都可以设置鼠标悬浮状态*/
+        a:hover {
+              color: red; /*悬停时文本变红*/
+              text-decoration: none; /*悬停时无下划线*/
+         }
+        a:visited {
+              color: purple; /*已访问链接文本为紫色*/
+         }  
+        a:active {
+              color: green; /*活动链接文本为绿色*/
+         }
+        /*工作中一个a标签设置超链接样式，只加hover状态，其他状态继承默认样式*/
+        a {
+              text-decoration: none; /*无下划线*/
+              color: blue; /*默认链接颜色为蓝色*/
+         }
+         /*选择器优先级高样式生效，！important,可提高优先级。通配符选择器优先级最低，标签选择器次之，类选择器更高，id选择器更高，内联样式最高*/
+        /*内联样式优先级最高，通常用于特殊情况*/
+    </style>
+</head>
+<body>
+    <span>这是父亲span标签</span>
+    <div id="red">这是div标签</div>
+    <span>这是儿子span标签</span>
+    <p class="blue">这是p标签</p>
+    <p>
+        <span>这是span孙子标签</span>
+       
+    </p>
+    <a href="https://www.example.com">这是链接</a>
+    <div class="green">这是div标签</div>
+    <!-- <div>独占一行</div>
+     <span>不换行 -->
+</body>
+</html>

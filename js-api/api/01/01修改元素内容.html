@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">我是文字内容</div>
+    <script>
+        const obj={
+            name:'张三',
+        }
+        console.log(obj.name)//获取对象属性值
+        obj.name='李四'//修改对象属性值
+        const box=document.querySelector('.box')
+        // 修改文字内容，对象.innerHTML
+        alert(boxinnerText)//获取文字内容
+        box.innerText='<strong>我是新内容</strong>'//不解析标签,修改文字内容
+
+        const info=document.querySelector('.info')
+        //获取标签内部文字
+        //console.log(info.innerHTML)
+        //添加/修改标签内部文字内容
+        info.innerHTML='<strong>我是新内容</strong>'//解析标签，修改标签内容
+    </script>
+</body>
+</html>

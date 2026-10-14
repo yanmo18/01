@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位元素居中效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 用transform实现平移，向左上移动自身尺寸的一半 ，用margin也可以实现 */
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Hello, World!</h1>
+    </div>
+</body>
+</html>

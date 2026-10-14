@@ -1,0 +1,16 @@
+//单行注释
+/*块注释*/
+.father{
+    color: aqua;
+    a{
+        color: blue;
+        // &表示当前选择器，代码写到谁的下面就代表谁。
+        // 不会生成后代选择器
+        // 应用：配合hover伪类使用和nth-child结构伪类选择器使用。
+        &:hover{
+            color: red;
+        }
+    }
+    // a:hover{
+    //     color: red;
+}   

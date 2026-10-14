@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //随机生成随机数1-10
+         function getRandom(N,M){
+            return Math.floor(Math.random()*(M-N+1))+N
+        }
+        let num1=+prompt("请输入随机数范围最小值")
+        let num2=+prompt("请输入随机数范围最大值")
+        let random = getRandom(num1,num2)
+        console.log(random)
+        //需要不断循环使用while
+        while(true){
+            //用户输入一个值
+            let num = +prompt("请输入你猜的数字")
+            //判断输出
+            if(num>random){
+                alert("猜大了")
+        }else if(num<random){
+                alert("猜小了")
+        }else{
+            // flag=false
+                alert("猜对了")
+                break
+        }
+    }
+    // if(flag){
+    //     alert('次数用完')
+    // }
+
+    //限定次数三次，三次没猜对直接退出
+    let flag=true//开关变量
+    for(let i=0;i<=3;i++){
+        let num=+prompt("请输入你猜的数字")
+         if(num>random){
+                alert("猜大了")
+        }else if(num<random){
+                alert("猜小了")
+        }else{
+            flag=false
+                alert("猜对了")
+                break
+        }
+    }
+    if(flag){//放在for循环外面，跳出for循环后，再判断flag的值，当猜对时也会跳出循环，所以flag为false
+
+        alert('次数用完')
+    }
+
+    </script>
+</body>
+</html>

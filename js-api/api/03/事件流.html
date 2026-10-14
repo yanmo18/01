@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fath{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="fath">
+        <div class="son">
+
+        </div>
+    </div>
+    <script>
+        // 给文件的文档对象添加时间监听,false是冒泡阶段,true是捕获阶段
+        const fath = document.querySelector('.fath')
+        const son = document.querySelector('.son')
+        document.addEventListener('click',function(){
+            alert('点击了主')
+        })
+        fath.addEventListener('click',function(){
+            alert('点击了父')
+        })
+        son.addEventListener('click',function(e){
+            alert('点击了子')
+            e.stopPropagation()
+        })
+        //   解绑事件
+        son.removeEventListener('click',function(){
+            alert('点击了子')
+        })
+    </script>
+</body>
+</html>

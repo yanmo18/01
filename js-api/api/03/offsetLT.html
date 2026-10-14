@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 50px;
+        }
+        p{
+            width: 10px;
+            height: 10px;
+            background-color: blue;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    <script>    
+        const div=document.querySelector('div');
+        const p=document.querySelector('p');
+        // 检测盒子位置，最近有定位的祖先元素，如果没有则为body，body自带一个8px的内边距，所以p的偏移量是5+8=13px
+        console.log(p.offsetLeft,p.offsetTop);
+        console.log(div.offsetLeft,div.offsetTop);
+    </script>
+</body>
+</html>

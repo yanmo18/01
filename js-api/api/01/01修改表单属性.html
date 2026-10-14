@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBox" value="初始值"/>
+    <button disabled>点击</button>
+    <!-- disabled是布尔属性，表示按钮是否被禁用 -->
+    <script>
+        //获取元素，id选择器
+        const uname=document.querySelector('#inputBox');//获取输入框元素
+        //获取属性值，获取表单里面的值用的表单.value
+        console.log(uname.value);//获取输入框的值，初始值
+        //修改属性值
+
+        console.log(uname.innerHTML);//无法获取表单内容，innerHTML获取的是标签里面的内容，表单用的是value属性来获取值
+         uname.value="修改后的值";//修改输入框的值
+         uname.type="password";//修改输入框的类型
+
+        // 获取
+        const ipt=document.querySelector('#inputBox');
+        console.log(ipt.type);//获取输入框的类型
+        console.log(ipt.checked)//获取复选框的选中状态，未选中返回false，选中返回true
+        ipt.checked=true;//修改复选框的选中状态，选中
+        
+        ipt.checked='true'//选中，有隐形转换，字符串'true'转为布尔值true，除了空字符串，其他字符串都会转为true
+
+
+
+        //  获取布尔属性,diasbled,checked,selected都是布尔属性
+        const bottom=document.querySelector('button');//获取按钮元素
+        console.log(bottom.disabled);//获取按钮的disabled属性值，true表示禁用，false表示不禁用
+    </script>
+    
+</body>
+</html>

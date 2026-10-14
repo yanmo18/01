@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    span {
+        display: inline-block;
+        /* inline-block行内块 */
+        width: 100px;
+        padding: 5px 10px;
+        border: 1px solid #472f2f;
+        margin: 5px;
+        background-color: #99a0bd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #140a0a;
+        text-align: center;
+}
+    </style>
+</head>
+<body>
+    <script>
+        // 外层控制行
+        for (let i = 1; i <= 9; i++) {
+            // 内层控制列
+            for (let j = 1; j <= i; j++) {
+                document.write(`<span>${i} * ${j} = ${i * j}</span> `);
+            }
+            // 换行
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

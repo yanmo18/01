@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1函数表达式
+        let sum = function (a, b) {
+            console.log(a + b);
+        };
+        sum(2,4)//6
+        //函数表达式，与函数具名不同，只能声明后使用。具名可以在任何地方使用
+
+        //2立即执行函数避免全局变量污染,必须加分号否则会被当成同一个函数
+       
+        //写法1
+        (function(x,y){
+            console.log(x+y)
+        })(1,3);//第二个小括号是调用函数实参，第一个小括号是声明函数
+
+        (function(){
+            let a = 20;
+            console.log(a);//20
+        })();
+        //写法2
+        (function(){}())
+        (function(x,y){     
+        console.log(x*y)
+        }(2,4));
+    </script>
+</body>
+</html>

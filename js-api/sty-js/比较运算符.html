@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log(3>5);
+    console.log(3<5);
+    console.log(3==5);
+    console.log(3!=5);
+    console.log(3>=5);
+    console.log(3<=5);
+    console.log(3===5);
+    // 比较运算符有隐式转换，把‘2’将转换成数字2进行比较，所以结果是true。
+    console.log(2 == '2');//true
+    console.log(2 === '2');//false，判断值与数据类型都一样才为true
+    //类外
+    console.log( NaN === NaN ); // false
+    console.log( NaN == NaN ); // false,NAN不等于任何值，包括自己
+    console.log(2 !== '2');//false,判断值与数据类型都一样为true
+// 字符串比较，ascll码值比较
+    console.log('b' > 'a');//
+    console.log('abc' < 'abd');//true,因为a的ascll码值小于b，所以abc<abd,逐个对应比较，直到不相等为止。
+    </script>
+</body>
+</html>

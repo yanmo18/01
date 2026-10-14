@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 把所有var声明的变量提升到作用域的顶部
+        // 只提升声明，不提升赋值
+        var num
+        console.log(num)
+        // 输出undefined，因为赋值没有提升
+        num=10
+        console.log(num)//输出10
+
+        // 函数提升,会把函数声明提升到当前作用域的顶部
+        fn()
+        function fn(){
+            console.log('hello world')
+
+        }
+        // 会报错，函数声明提升，但是函数表达式没有提升
+        fun()
+        var fun=function(){
+            console.log('hello world')
+
+        }
+    </script>
+</body>
+</html>

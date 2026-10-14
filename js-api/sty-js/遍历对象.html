@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            name: '张三',
+            age: 18,
+            gender: '男'
+        };
+        for (let k in obj) {
+            // console.log(key + ': ' + obj[key]);
+            //k或key 是键名，属性名。v或value是键值
+            console.log(k)//属性名'name''age'
+            console.log(obj.name)//属性值'张三'
+            // console.log(obj.k)//错误undefined,k是变量，obj对象没有k属性，k==='age'
+            //console.log(obj.'age')//错误，语法错误,属性名不用'''
+            console.log(obj[k])//属性值'张三' 18 '男'
+            console.log(obj['name'])//属性值'张三'
+
+
+        }
+    </script>
+</body>
+</html>

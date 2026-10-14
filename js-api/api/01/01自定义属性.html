@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-id="1" data-spm="noknown"></div>
+    <div data-id="2"></div>
+    <div data-id="3"></div>
+    <div data-id="4"></div>
+    <div data-id="5"></div>
+    <script>
+        const one=document.querySelector('div');//获取第一个div元素
+        console.log(one.dataset.id);//获取自定义属性data-id的值，dataset属性用于获取和设置元素的data-开头的自定义属性，返回一个DOMStringMap对象，可以通过点语法访问具体的自定义属性
+        console.log(one.dataset.spm);//获取自定义属性data-spm的值
+    </script>
+</body>
+</html>

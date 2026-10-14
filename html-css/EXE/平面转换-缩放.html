@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .box{
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        background-color: lightblue;    
+    }
+    .box img{
+        /* width: 200px; */
+        /* height: 200px; */
+        /* 图片放大两倍 */
+        /* 修改宽高尺寸，从左上角开始缩放 */
+        transform:scale(2);
+        /* 取值大于1为放大，小于1缩小 */
+        /* transform-origin:0 0; */
+        /* 设置图片放大参照物，左上角 */
+        transform-origin:top left;
+    }   
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/fm.jpg" alt="">
+    </div>
+</body>
+</html>

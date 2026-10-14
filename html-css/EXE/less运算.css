@@ -1,0 +1,10 @@
+/*块注释*/
+.father {
+  color: aqua;
+}
+.father a {
+  color: blue;
+}
+.father a:hover {
+  color: red;
+}

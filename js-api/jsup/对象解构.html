@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj={
+            uname:'张三',
+            age:18
+        }
+        obj.uname
+        obj.age
+        const uname='李四'//重新赋值
+        const{uname1,age1}={uname1:'张三',age1:18}//解构赋值,属性名必须和对象的属性名一致
+        console.log(uname1,age1)
+        //1.对象解构的变量名可以重新改名,旧的变量名：新变量名
+
+        const{uname1:uname2,age1:age2}={uname1:'张三',age1:18}
+        console.log(uname2,age2)
+        // 2.解构数组对象
+        const arr=[{uname4:'张三',age4:18},{uname5:'李四',age5:20}]
+        const[{uname4,age4},{uname5,age5}]=arr
+        console.log(uname4,age4,uname5,age5)
+        // 3.多级对象解构
+        const obj1={
+            name:'ss',
+            age:10,
+            fam:{
+                name:'dd',
+                age:3,
+                ss:'uyu'
+            },
+            qq:'pp'
+        }
+        const{name,age,fam:{name:names,age:ages,ss},qq}=obj1
+        console.log(name,age,names,ages,ss,qq)
+        // 4.解构函数返回值
+    </script>
+</body>
+</html>

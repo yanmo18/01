@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('1');   
+        document.addEventListener('click', function() {
+            console.log('2');
+        })   
+        console.log('3');   
+
+        setTimeout(function() {
+            console.log('4');
+        }, 3000)
+        // 同步代码执行完毕之后再执行异步代码
+        // 同步执行1,2.异步执行3,4
+        // 异步处理给浏览器一个执行的时间，在3秒之后执行异步代码，看先到3秒还是先点击事件，1243或者1234
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.aigei.com/home/">
+        <input type="submit" value="注册">
+    </form>
+    <a href="https://www.aigei.com/home/">爱给</a>
+    <script>
+        const form=document.querySelector('form')
+        form.addEventListener('submit',function(e){
+            // 阻止默认行为提交
+            e.preventDefault()
+        })
+        const a=document.querySelector('a')
+        a.addEventListener('click',function(e){
+            // 阻止默认行为提交
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>

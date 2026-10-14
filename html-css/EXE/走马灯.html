@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走马灯</title>
+    <style>
+        img {
+        width: 200px; /* 图片宽度 */
+        display: block; /* 图片块级元素 */
+    }
+.box {
+    width: 600px; /* 盒子宽度 */
+    height: 200px; /* 盒子高度 */
+    overflow: hidden; /* 超出隐藏 */
+    border: 2px solid black; /* 边框样式 */
+    margin: 100px auto; /* 盒子外边距 */
+}
+.box ul {
+    display: flex; /* 父级加flex布局列表项水平排列 */
+    animation: move 6s infinite;
+    /* infinite: 无限循环 */
+}
+/* 定义位移动画 
+    ul使用动画，
+    鼠标悬停暂停动画*/
+@keyframes move {   
+    0% {
+        transform: translateX(0); /* 初始位置 */
+    }
+    100% {
+        transform: translateX(-1200px); /* 结束位置 */
+    }
+}
+.box ul:hover {
+    animation-play-state: paused; /* 暂停动画 */
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li>  
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li> 
+            <!-- 替身：填补显示区域留白 -->
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li>
+            <li><img src="./img/bg.jpg" alt=""></li> 
+        </ul>
+    </div>
+</body>
+</html>

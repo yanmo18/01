@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堆叠顺序z-index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute; /* 绝对定位 */
+            top: 50px;
+            left: 50px;
+            opacity: 0.8; /* 透明度 */
+        }
+        .box1 {
+            background-color: red;
+            /* 取值是整数，默认为0，数值越大，层级越高 */
+            z-index: 1;
+        }
+        .box2 {
+            background-color: green;
+            z-index: 2;
+            left: 100px;
+        }
+        .box3 {
+            background-color: blue;
+            z-index: 3;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">div1</div>
+    <div class="box2">div2</div>
+    <div class="box3">div3</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.itcast.cn">支付成功<span>5</span>秒后跳转到首页</a>
+    <script>
+        const a=document.querySelector('a')
+        const span=document.querySelector('span')
+        // const date=new Date()
+        // 声明倒计时变量
+        let time=5
+        a.addEventListener('click',function(e){
+            location.href='http://www.itcast.cn'
+        })
+        let times=setInterval(function(){
+            // 倒计时5秒
+            time--
+            span.innerHTML=`${time}`
+            if(time==0){
+                clearInterval(times)
+                location.href='http://www.itcast.cn'}
+           
+        },1000)
+    </script>
+</body>
+</html>

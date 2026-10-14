@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj={
+            unname:'小米Pro9',
+            num:'796756',
+            weight:'0.35kg',
+            address:'北京市海淀区上地十街10号'
+        }
+        obj.price='5999元';//新增属性
+        console.log(obj);
+        obj.sing=function(){//新增方法,方法是对象的属性，属性值是个函数
+            console.log('我是一台电脑');
+        }
+        console.log(obj.name)//undefined,对象没有定义name属性，无法输出obj对象的name属性值
+        obj.sing();//调用obj对象的sing方法
+
+
+        // 增删改查
+        obj.price='5999元';//新增属性
+        obj['num-price']='244元';//新增属性，属性名中有-，必须用[]方式
+        console.log(obj);
+        console.log(obj['num-price']);//查询属性，属性名中有-，必须用[]方式
+        obj.weight='0.54kg';//修改属性
+        console.log(obj.address)//查询属性
+        delete obj.num;//删除属性
+        console.log(obj);
+
+        //对象声明方法
+        let person={
+            name:'张三',
+            sayHi:function(){
+                console.log('大家好，我是'+person.name);
+            },
+            sum:function(a,b){
+                return a+b;
+            },
+        }
+        person.sum(10,20);//调用sum方法
+        person.sayHi();//调用sayHi方法
+    </script>
+</body>
+</html>

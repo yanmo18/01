@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>setsefg</p>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        const ul=document.querySelector('ul')
+        console.log(ul.childern)//获取到的是伪数组，但是没有length属性，是获取亲儿子的元素节点，不包括文本和注释等节点
+        const li2=document.querySelector('li:nth-child(2)')
+        console.log(li2.previousElementSibling)//获取上一个兄弟元素节点，不包括文本与注释
+        console.log(li2.nextElementSibling)//获取下一个兄弟元素节点，不包括文本与注释
+    </script>
+</body>
+</html>

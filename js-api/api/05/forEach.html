@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 简单遍历数组
+    const arr=[1,2,3,4,3]
+    arr.forEach(function(item){
+        console.log(item)
+    })
+    // 输出12343
+    // 带索引的遍历
+    const arr1=['pg','java','python']
+    arr1.forEach((item,index)=>{
+        console.log(`第${index+1}个元素${item}`)
+    })
+    // 输出第1个元素pg，第2个元素java，第3个元素python
+    // 操作原数组（修改元素）
+    const num=[1,2,3,4]
+    num.forEach((item,index,array)=>{
+        array[index]=item*2//直接修改了原数组
+    })
+    console.log(num)
+    // 输出1,2,3,4被改成了2,4,6,8
+    </script>
+</body>
+</html>

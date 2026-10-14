@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐方式</title>
+    <style>
+        div{
+            border: 1px solid red;
+           
+        }
+      img{
+        /* vertical-align: middle; */
+        /* 顶对齐：最高内容的顶部 */
+        /* vertical-align: top; */
+        /* 底对齐：最高内容的底部 */
+        /* vertical-align: bottom; */
+        display: block;
+        /* 因为浏览器将行内快，行内标签当做文字处理，默认基线对齐，
+        效果：图片img的底下有空白，转块级不按基线对齐，空白就消失了 */
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./img/sprite.png" alt="">
+        我是谁？我在哪？
+    </div>
+</body>
+</html>

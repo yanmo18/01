@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 等待页面所有资源加载完成执行回调函数
+        windoe.addEventListener('load',function(){
+            const btn=document.querySelector('button')
+            btn.addEventListener('click',function(){
+                console.log('按钮被点击')
+            })
+            console.log('页面加载完成')
+        })
+        // 页面部分资源加载完
+        document.addEventListener('DOMContentLoaded',function(){
+            alert('页面部分资源加载完成')
+        })
+    </script>
+</head>
+<body>
+    <button>点击</button>
+</body>
+</html>

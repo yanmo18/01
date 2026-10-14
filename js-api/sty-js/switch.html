@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        switch (1) {
+            case 1:
+                console.log('1');
+                break;//退出switch语句
+            case 2:
+                console.log('2');
+                break;
+            default:
+                console.log('default');
+        }
+        // 例子
+        // 用户输入。2数字，+操作符号+-*
+        let num1 = +prompt('请输入第一个数字');
+        let num2 = +prompt('请输入第二个数字');
+        let sp = prompt('请输入操作符');
+        // 判断输出
+        switch (sp) {
+            case '+':
+                alert(`两个数加法操作${num1 + num2}`);
+                break;
+            case '-':
+                alert(`两个数减法操作${num1 - num2}`);
+                break;
+            case '*':
+                alert(`两个数乘法操作${num1 * num2}`);
+                break;
+            case '/':
+                alert(`两个数除法操作${num1 / num2}`);
+                break;
+            default:
+                alert('请输入正确的操作符');
+        }
+    </script>
+</body>
+</html>

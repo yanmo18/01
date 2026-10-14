@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 动态参数arguments是一个伪数组，只存在于函数
+        function argue(){
+            console.log(arguments);
+        }
+        argue(1,2,3)//输出[1,2,3],包括穿入的所有参数，但是不能使用数组方法，例如forEach和map，还有length属性可以使用
+
+
+        // 剩余参数是当不确定会否传入多个参数时，使用剩余参数
+        // 剩余参数是...arr,arr是一个真数组,可以使用数组方法和length属性
+        function add(...arr){
+            console.log(arr);//使用时直接写arr,不需要添加...
+        }
+        add(1,2,3,4,5)//输出[1,2,3,4,5]
+        function add2(a,b,...arr2){
+            console.log(a,b,arr2);
+        }
+        add2(1,2,3,4,5)//输出1,2,[3,4,5]
+        add2(1,2)//输出1,2,[]，剩余参数没有传值时，默认为一个空数组
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>事件监听</div>
+    <button>点击</button>
+    <script>
+        //需求，点击按钮，弹出一个对话框
+        //1.事件源，按钮
+        //2.事件类型，点击鼠标，click字符串
+        //3.事件处理程序，弹出对话框
+        const btn=document.querySelector('button')
+        let i=0
+        btn.addEventListener('click',function(){
+            i++
+            alert(`按钮被点击${i}次`)
+        })
+        // 鼠标经过
+        const div=document.querySelector('div')
+        div.addEventListener('mouseenter',function(){
+            alert('鼠标经过了div')
+        })
+        // 鼠标离开
+        div.addEventListener('mouseleave',function(){
+            alert('鼠标离开了div')
+        })
+    </script>
+</body>
+</html>

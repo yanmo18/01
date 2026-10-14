@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const box=document.auerySelector('.box')
+        //修改样式属性，对象.style=‘值’，要写样式单位，如果要修改多个样式属性，则分开写
+        box.style.width='200px'
+        box.style.backgroundColor='blue'
+        //当有-时使用驼峰命名法
+        box.style.borderTop='5px solid green'
+        
+    </script>
+
+</body>
+</html>

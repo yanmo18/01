@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(true){
+            console.log("条件为true，执行此代码块");
+        }
+        // 除了0、null、undefined、NaN、''(空字符串)之外，其他值都被当作true处理
+        if(0){
+            console.log("条件为false，不执行此代码块");
+        }
+        // 用户输入
+        let age = +prompt("请输入你的成绩");
+        if(age >= 60){
+            console.log("及格");
+        } else {
+            console.log("不及格");
+        }
+        // 闰年判断
+        let year = +prompt("请输入一个年份");
+        if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+            alert(`${year}是闰年`);
+        } else {
+            alert(`${year}不是闰年`);
+        }
+// 多分支判断
+
+        let score = +prompt("请输入你的成绩");
+        if(score >= 90){
+            alert("优秀");
+        } else if(score >= 80){
+            alert("良好");
+        } else if(score >= 70){
+            alert("中等");
+        } else if(score >= 60){
+            alert("及格");
+        } else {
+            alert("不及格");
+        }
+    </script>
+</body>
+</html>

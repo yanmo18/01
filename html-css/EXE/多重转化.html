@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.box{
+    width: 300px; /* 盒子宽度 */
+    height: 300px; /* 盒子高度 */
+    background-color: lightblue; /* 盒子背景颜色 */ 
+}
+.box:hover img{
+    transform:translate(600px) rotate(360deg);
+    /* 先平移再旋转 */
+    /* 旋转会改变坐标轴向 */
+    /* 多重转换以第一种转换形态的坐标轴为准 */
+    transition: all 1s;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/tyre.png" alt="">
+    </div>
+</body>
+</html>

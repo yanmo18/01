@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            font-size:16px;
+            color:#333;
+            width:200px;
+            height:100px;
+            border:10px solid #666;
+            padding:20px;
+            margin:30px;
+            background-color: aqua;
+        }
+        h1{
+            font-size:24px;
+            color:#666;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <h1>盒子模型属性</h1>
+    <h1>盒子模型属性</h1>
+    <h1>盒子模型属性</h1>
+    <h1>盒子模型属性</h1>
+    <h1>盒子模型属性</h1>
+    <script>
+        var box = document.getElementById('box');
+        //height,width,border,padding,margin都是盒子模型的属性，可以通过元素对象.style.属性名来修改,获取box
+        console.log(box.clientHeight);//获取元素的可见高度，包括padding，不包括border和margin
+        console.log(box.clientWidth);//获取元素的可见宽度，包括padding，不包括border和margin
+
+        console.log(box.offsetHeight);//获取元素的可见高度，包括padding和border，不包括margin
+        console.log(box.offsetWidth);//获取元素的可见宽度，包括padding和border，不包括margin
+
+        console.log(box.scrollHeight);//获取元素的内容高度，包括溢出不可见的部分
+        console.log(box.scrollTop);//获取元素的垂直滚动距离
+        console.log(box.scrollLeft);//获取元素的水平滚动距离
+    </script>
+</body>
+</html>

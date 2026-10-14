@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Date.now());//当前时间戳
+        console.log(new Date(1768293879858));//当前时间对象,数字表示时间戳
+        console.log(new Date().getTime());//当前时间戳
+        console.log(new Date(1768293879858).getFullYear());//当前年份
+        console.log(new Date().getFullYear());//当前年份
+        console.log(new Date().getMonth());//当前月份
+
+        console.log(new Date().getDate());//当前几号
+        console.log(new Date().getDay());//当前星期几
+
+        console.log(new Date().getHours());//当前小时
+        console.log(new Date().getMinutes());//当前分钟
+        console.log(new Date().getSeconds());//当前秒数
+        console.log(new Date().getMilliseconds());//当前毫秒数
+        console.log(new Date().toLocaleDateString());//本地日期字符串
+        console.log(new Date().toLocaleTimeString());//本地时间字符串
+    </script>
+</body>
+</html>

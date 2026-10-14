@@ -1,0 +1,211 @@
+//out:../css/
+@import "./base.less";
+body{
+    background-color: #f9fafb;
+}
+@vw:3.75vw;
+// 头部
+header{
+    position: fixed;
+    padding: 0 (15/@vw);
+    // 固定定位的盒子宽度考内容撑开，希望宽度100%
+    width: 100%;
+    height: (50/@vw);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    // 侧轴对齐方式
+    justify-content: space-between;
+    // 左
+    .left{
+        height: (50/@vw);
+        width: (235/@vw);
+        background-image: url(../assets/head.png);
+        // 背景图片自适应容器大小
+        background-size: contain;
+        // 背景不重复
+        background-repeat: no-repeat;
+    }
+        a{
+            width: (80/@vw);
+            height: (30/@vw);
+            margin-right: (10/@vw);
+            background-color:rgb(175, 254, 16) ;
+            border-radius: (15/@vw);
+            line-height: (30/@vw);
+            font-size:(14/@vw) ;
+            text-align: center;
+        }
+    }
+    // 搜索框
+    .search{
+        // 头部固定定位，脱离文档流，搜索框需要加上margin-top，否则会被头部遮挡
+
+        margin-top: (50/@vw);
+        padding: (10/@vw) (15/@vw);
+        height: (52/@vw);
+        background-color: antiquewhite;
+        .txt{
+            width: 100%;
+            height: (32/@vw);
+            border-radius: (16/@vw);
+            text-align: center;
+            line-height:(32/@vw) ;
+            background-color: #848383;
+            .iconfont{
+                font-size:(16/@vw) ;
+                color: #fff;
+            }
+        }
+    }
+//  banner
+.banner{
+    padding: 0(15/@vw);
+    height: (108/@vw);
+    ul{
+        li{
+            width: (345/@vw);
+            height: (108/@vw);
+            img{
+                width: 100%;
+                height: 100%;
+            //    当图片比例与父级比例不一致时，避免图片被压缩变形，可以使用object-fit属性。
+                // cover 图片会保持宽高比缩放，直到完全覆盖整个容器区域。如果图片的宽高比与容器的不同，那么图片会被裁剪以适应容器的大小。一般会剪切图片最左最右上下，不会影响主体部分
+                object-fit: cover;
+                border-radius: (5/@vw);
+            }
+        }
+    }
+}
+// 排行榜
+.list{
+    margin-top: (20/@vw);
+    padding: 0 (15/@vw);
+    li{
+        display: flex;
+        margin-bottom: (16/@vw);
+        height: (100/@vw);
+        background-color: #fff;
+        border-radius: (10/@vw);
+        .pic{
+            margin-right: (20/@vw);
+            img{
+                width: (100/@vw);
+                height: (100/@vw);
+                border-radius: (10/@vw);
+                object-fit: cover;
+            }
+        }
+        .txt{
+           a{
+            display: block;
+            font-size: (12/@vw);
+            color: #6c6b6b;
+            line-height: 1.8;
+           }
+         .more{
+            font-size: (14/@vw);
+            color: #333;
+            .iconfont{
+                font-size: (16/@vw);
+            }   
+         }
+        }
+    }
+}
+// 标题，公共样式
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: (15/@vw);
+    line-height: (25/@vw);
+    h4{
+        font-size: (20/@vw);
+    }
+    a{
+        font-size: (14/@vw);
+        color: #999;
+    }
+}
+// 推荐歌单
+.recommend{
+    padding: 0 (15/@vw);
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            width: (100/@vw);
+            margin-bottom: (16/@vw);
+            height: (100/@vw);
+            // 图片
+            .pic{
+                width: (100/@vw);
+                height: (100/@vw);
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: (10/@vw);
+                }
+                .cover{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: (70/@vw);
+                    height: (28/@vw);
+                    background-color: rgba(0,0,0,.8);
+                    border-radius: 0 (10/@vw) (0) (10/@vw);
+                    text-align: center;
+                    line-height: (28/@vw);
+                    color: #fff;
+                    font-size: (14/@vw);
+                }
+            }
+            // 文字
+            .txt{
+                margin-top: (10/@vw);
+                font-size: (14/@vw);
+                color: #333;
+                line-height: 1.5;
+        }
+    }
+}
+}
+// 下载
+.download{
+   position: fixed;
+//    固定定位页面滚动，内容不会跟着页面滚动而滚动
+   z-index: 1000;
+
+display: flex;
+align-items: center;
+left:(15/@vw) ;
+bottom: (30/@vw);
+padding: 0 (10/@vw) 0 (15/@vw);
+width: (345/@vw);
+height: (45/@vw);
+background-color: #fff;
+border-radius: (22/@vw);
+img{
+    width: (30/@vw);
+    height: (30/@vw);
+    margin-right: (10/@vw);
+    object-fit: cover;
+}
+p{
+    flex:1;
+    font-size: (14/@vw);
+    color: #333;
+}
+span{
+    width: (32/@vw);
+    height: (32/@vw);
+    line-height: (32/@vw);
+    text-align: center;
+    border-radius: 50%;
+    font-size: (16/@vw);
+    color: #4b4a4a;
+}
+}

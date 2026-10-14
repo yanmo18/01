@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 当检测到视口宽度是375，网页背景色是变为绿色 */
+        @media (width: 375px) {
+            body {
+                background-color: green;
+            }
+        }
+        /* 使用媒体查询，给不同视口屏幕设置不同html字号 */
+        @media (width: 768px) {
+            html {
+                font-size: 14px;
+            }
+        }
+        @media (width: 1024px) {
+            html {
+                font-size: 16px;
+            }
+        }
+        .box {
+            width: 4rem;
+            height: 3rem;
+            background-color: rgb(205, 97, 97);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding-top: 200px;
+            height: 3000px;
+        }
+        div{
+            display: none;
+            border: 1px solid black;
+            overflow: scroll;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        wengrgvregtrhbyhbisnbig
+          wengrgvregtrhbyhbisnbig
+            wengrgvregtrhbyhbisnbig
+              wengrgvregtrhbyhbisnbig
+                wengrgvregtrhbyhbisnbig
+                  wengrgvregtrhbyhbisnbig
+                    wengrgvregtrhbyhbisnbig
+                      wengrgvregtrhbyhbisnbig
+                        wengrgvregtrhbyhbisnbig  wengrgvregtrhbyhbisnbig
+                          wengrgvregtrhbyhbisnbig
+                            wengrgvregtrhbyhbisnbig
+                              wengrgvregtrhbyhbisnbig
+
+    </div>
+    <script>
+          // 开启页面就会在300位置停止
+        document.documentElement.scrollTop=300
+        // 页面滚动事件
+        // window.addEventListener('scroll',function(){
+        //     console.log('hui')
+        // })
+        const div=document.querySelector('div')
+        window.addEventListener('scroll',function(){
+            // console.log('hui')
+            // 页面滚动像素
+        //    console.log(document.documentElement.scrollTop)
+        const n=document.documentElement.scrollTop
+        if(n>200){
+            div.style.display='block'
+        }
+        })  
+        
+    </script>
+</body>
+</html>

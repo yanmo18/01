@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子圆角</title>
+</head>
+<style>
+    .box {
+        width: 200px; /* 盒子宽度 */
+        height: 100px; /* 盒子高度 */
+        background-color: rgb(161, 4, 239); /* 背景颜色 */
+        padding: 20px; /* 内边距 */
+        border: 5px solid black; /* 边框样式 */
+        margin: 10px; /* 外边距 */
+        border-radius: 50px; /* 圆角半径 ，胶囊*/
+        /* border-radius: 15px; 圆角半径 */
+        /* 记忆：从左上角顺时针赋值。，没有的角取对角值相同 */
+        /* 三值：左上，右上左下，右下 */
+    }
+    img {
+        width: 100px; /* 图片宽度 */
+        height: 100px; /* 图片高度 */
+        border-radius: 50%; /* 最大值是50%，超过无效图片圆角,正圆 */
+    }
+    </style>
+<body>
+    <img src="https://www.example.com/image.jpg" alt="示例图片" >
+    <div class="box">
+        盒子内容
+    </div>  
+    <div class="shadow-box">
+        阴影盒子内容
+    </div>
+    <!-- 阴影x轴偏移量，y轴偏移量必须写 模糊半径扩散半径颜色内外阴影。
+     默认为外阴影，内阴影需要添加inset-->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css精灵</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-image: url(./img/sprite.png);
+            background-position: -10px -10px;
+            background-repeat: no-repeat; /* 不重复 */
+        }
+        /* 
+        创建盒子，盒子尺寸与小贴图尺寸一致
+        设置盒子背景图为精灵图
+        添加background-position属性，定位到对应的小贴图
+            使用pxcook测量小图片左上角坐标
+            取其负数作为background-position的值（向左上移动使用负数）
+        */
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

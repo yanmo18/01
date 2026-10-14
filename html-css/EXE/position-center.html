@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中绝对定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .center {
+            position: absolute; /* 绝对定位 */
+            top: 50%;
+
+            /* margin-left: 239px;
+             margin-top: 123px; */
+            /* 向左移动自身高度一半 */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+         /* 定位居中
+        绝对定位，水平垂直边偏移50%，子级向左上移动自身尺寸一半
+        */
+    </style>
+</head>
+<body>
+    <div class="center">你好呀</div>
+</body>
+</html>

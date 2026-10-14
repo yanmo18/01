@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fath{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .leave{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+        .senter{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="fath">
+        <div class="son">
+
+        </div>
+    </div>
+    <div class="leave">
+        <div class="senter">
+
+        </div>
+    
+    </div>
+    <script>
+        // 鼠标经过会触发事件，mouseover会有冒泡事件，mouseenter没有冒泡事件。从父元素进入子元素，会触发父元素的mouseover事件，直到触发子元素的mouseover事件。父元素会被触发离开的事件
+        const fath = document.querySelector('.fath')
+        const son = document.querySelector('.son')
+        fath.addEventListener('mouseover',function(){
+           console.log('父元素被触发了')
+        })
+        fath.addEventListener('mouseout',function(){
+            console.log('父元素被移出了')
+        })
+        son.addEventListener('mouseover',function(){
+            console.log('子元素被触发了')
+        })
+        son.addEventListener('mouseout',function(){ 
+            console.log('子元素被移出了')
+        })
+        // 子元素被触发后，父元素会被触发离开的事件，但是mouseover有冒泡，所以会向上冒泡，触发同名事件，父元素的mouseover会被再次触发
+
+        // mouseenter没有冒泡事件，所以不会向上冒泡，所以父元素不会被触发离开的事件
+ const leave = document.querySelector('.leave')
+        const senter = document.querySelector('.senter')
+        leave.addEventListener('mouseenter',function(){ 
+           console.log('父元素被触发了')
+        })
+        leave.addEventListener('mouseleave',function(){
+            console.log('父元素被移出了')
+        })
+        senter.addEventListener('mouseenter',function(){
+            console.log('子元素被触发了')
+        })
+        senter.addEventListener('mouseleave',function(){ 
+            console.log('子元素被移出了')
+        })
+    </script>
+      
+
+</body>
+</html>

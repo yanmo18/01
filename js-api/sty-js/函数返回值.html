@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //函数返回值
+        // function ab(){
+        //     return 123
+        // }
+        // //相当于执行ab（）调用者ab（）函数，返回值赋值给变量a
+        // let a = ab()
+        // //打印a的值，即123，ab（）函数返回值赋值给变量a，打印出123
+        // console.log(a) 
+
+        //求和函数写法
+        // function getTotalPrice(x, y) {
+        //     return x + y
+        //     //return后面的代码不会被执行，因为return语句后面的内容不会被执行。
+
+        // }
+        // // console.log(getTotalPrice(1,2))
+        // let sum = getTotalPrice(1,2)
+        // console.log(sum)
+
+
+        //两个数最大值
+        function getMax(x, y) {
+            return x > y ? x : y
+        }
+       let max = getMax(1,2)
+       console.log(max)
+
+
+       //求任意数组最大值
+       function getArrValue(arr = []) {
+        // 先准备一个max变量存数组第一个值
+        let max2 = arr[0]
+        let min =arr[0]
+        //遍历数组，从第二个值开始比较
+        for(let i = 1; i < arr.length; i++) {
+            if(arr[i]>max2) {
+                max2 = arr[i]
+            }
+            //最小值
+            if(arr[i]<min) {
+                min = arr[i]
+            }
+        }
+        //return max2
+        //返回一个数组，包含最大值和最小值，return返回一个值，如果想返回多个值，可以使用数组封装起来一起返回
+
+        return [max2.min]
+           }
+        //    let max2 = getArrValue([1,2,3,4,5])
+           //数组封装起来一起返回，使用数组解构赋值取出最大值和最小值
+
+       let newArr = getArrValue([1,2,3,4,5])
+    //    alert(max2)
+    alert(newArr)
+    alert(`数组最大值${newArr[0]}`)
+    alert(`数组最小值${newArr[1]}`)
+            </script>
+</body>
+</html>

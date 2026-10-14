@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //封装函数
+        //给形参一个默认值，避免程序报错，arr=[]空数组，避免传入null或undefined，与arr.length数据类型不同报错
+        function getArrSum(arr = []) {
+            let sum = 0
+            for(let i=0;i<arr.length;i++){
+                sum += arr[i]
+        }
+        console.log(sum)
+    }
+    getArrSum([1,2,3])//实参
+    getArrSum([1,2,3,4])
+    getArrSum()
+
+    </script>
+</body>
+</html>

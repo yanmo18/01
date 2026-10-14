@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 准备一个总金额，不可以在循环内会重置金额，所以放在外面
+        let total = 100;
+      
+        while (true) {
+            let re = +prompt(`
+            请选择操作
+            1 - 存钱
+            2 - 取钱
+            3 - 显示用户
+            4 - 退出程序
+            `);
+            // 如果用户输入输入4则跳出循环
+            if (re === 4) {
+                break;
+        }
+        // 根据输入的值执行不同的操作
+        switch (re) {
+            case 1:
+            // 存取
+            let money = +prompt('请输入存取金额');
+            total += money;
+            break;
+            // 取钱
+            case 2:
+            let qu = +prompt('请输入取钱金额');
+            total -= qu;
+            break;
+            // 显示余额
+            case 3:
+            alert(`当前余额为${total}`);
+            break;
+                // switch 一定加break跳出，否则会一直执行下去
+    }
+}
+    </script>
+</body>
+</html>

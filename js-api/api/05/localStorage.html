@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 存储一个名字uname
+        // locatStorage.setItem('键'，‘值’)
+        localStorage.setItem('uname','张三');
+        // 获取存储的名字
+        // localStorage.getItem('键')
+        console.log(localStorage.getItem('uname'));
+        // 删除存储的名字，只删除键对应的值，不会删除其他键对应的值
+        // localStorage.removeItem('uname');
+        // 删除所有存储的数据
+        // localStorage.clear();
+        // 改，如果有则修改，如果没有则添加
+        localStorage.setItem('uname','李四');
+        // 存储一个年龄，本地存储只能存储字符串类型
+        localStorage.setItem('age',18); 
+
+        // 存储一个对象
+
+
+
+    </script>
+</body>
+</html>

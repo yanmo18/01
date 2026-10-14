@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math.PI);//圆周率3.141592653589793
+        console.log(Math.E);//自然常数2.718281828459045
+        console.log(Math.sqrt(16));//平方根4
+        console.log(Math.pow(2,3));//幂运算8
+        console.log(Math.abs(-5));//绝对值5
+        console.log(Math.ceil(3.14));//向上取整4
+        console.log(Math.floor(3.14));//向下取整3
+        console.log(Math.round(3.14));//四舍五入3
+        console.log(Math.random());//随机数0到1之间
+        console.log(Math.max(1,5,3,9,2));//最大值9
+        console.log(Math.min(1,5,3,9,2));//最小值1
+
+        // 随机数范围[0,1)
+        //0-100之间的随机整数
+        Math.floor(Math.random()*101);
+        Math.floor(Math.random()*11);
+        let arr=['A','B','C','D','E'];
+        let random=Math.floor(Math.random()*arr.length);
+        //永远不会超出数组下标范围
+        console.log(arr[random]);
+        //N-M
+        function getRandom(N,M){
+            return Math.floor(Math.random()*(M-N+1))+N;
+        }
+        console.log(getRandom(3,5))
+    </script>
+</body>
+</html>

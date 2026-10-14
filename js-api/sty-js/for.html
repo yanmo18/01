@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(起始值：终止值，变量变化量){}
+        // 起始值只执行一次
+        for(let i = 0;i < 2;i++){
+            document.write("我正在学习JavaScript");
+        }
+
+        // 输出1-100岁
+        for(let i = 1;i <= 100;i++){
+            document.write(`今年我${i}岁<br>`);
+        }
+
+        // 输出1-100偶数
+        let sum = 0
+        for(let i = 1;i <= 100;i++){
+            if(i % 2 ===0){
+                sum = sum + i
+            }
+        }
+        document.write(`1-100偶数和为: ${sum}`)
+
+        // 打印5个小星星
+        for(let i = 0;i < 5;i++){
+            document.write("*")
+        }
+
+        // 打印数组
+        let arr = [1,2,3,4,5]
+        for(let i = 0;i <= 4;i++){
+            // 或i<arr.length，或i<=arr.length-1
+            document.write(`${arr[i]}`)
+        }
+        // 嵌套循环
+        for (let i = 0;i <= 3;i++){
+            document.write(`第${i}个<br>`)
+            for(let j = 0;j <= 3;j++){
+                document.write(`第${j}个`)
+        }
+    }
+
+    // 打印倒三角星星
+    // 外层控制行数，内层控制列数
+    for(let i = 0;i < 5;i++){
+        for(let j = 0;j <= i;j++){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+    </script>
+</body>
+</html>

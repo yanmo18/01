@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 当父级无高度，子级为浮动，则子级无法撑开父级，与浏览器中相当于不存在，会导致页面布局错乱，使下一行的元素与上一行的子级重叠 -->
+     <!-- 清除浮动 -->
+      <!-- 设置一个个块级元素在css中设置为clear：both -->
+       <!-- 单伪元素法 -->
+        <!-- 双伪元素，在父级开头结尾加伪元素（推荐） -->
+    <style>
+        .top
+        {
+            margin: 10px auto;
+            width: 1280px;
+            /* height: 300px; */
+            background-color: aliceblue;
+            overflow: hidden;/* overflow父级元素添加hidden，超出则隐藏 */
+                }
+        /* 额外标签 */
+        .clearfix{
+            clear: both;
+        }
+        /* 单位元素 */
+.clearfix::after{
+    content: "";
+    /* 有content会使伪元素生效 */
+    display: block;
+    clear:both;
+}
+/* beefore解决外边距塌陷问题 */
+/* 双伪元素 */
+.clearfix::after,
+.clearfix::before{
+content: "";
+display: table;
+}
+/* 清除浮动 */
+.clearfix::after{
+    clear:both;
+}
+
+    </style>
+</head>
+<body>
+    <div class="top clearfix" >
+        <!-- 可以设置两个类名加空格 -->
+        <div class="left">
+        </div>
+        <div class="right">
+            <!-- <div class="clearfix"></div> 额外标签法-->
+        </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+</body>
+</html>

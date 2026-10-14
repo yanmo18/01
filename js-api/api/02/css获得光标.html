@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 200px;
+            transition:all 3s;
+            /* transition是过渡效果，给表单产生平滑的动画 */
+        }
+        /* focus伪类选择器，当表单获得焦点时 */
+        input:focus{
+            width:300px;
+        /* 这里是当表单获得焦点时，宽度变为300，transition指定的3秒过渡效果就会开始工作 */
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+</body>
+</html>

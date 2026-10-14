@@ -1,0 +1,30 @@
+{
+  "id": "5011605",
+  "name": "测试",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "45221330",
+      "name": "ico-navigation-account",
+      "font_class": "ico-navigation-account",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "45224583",
+      "name": "ic-button-generate",
+      "font_class": "ic-button-generate",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "45397858",
+      "name": "ic-sfx-regenerate",
+      "font_class": "ic-sfx-regenerate",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    }
+  ]
+}

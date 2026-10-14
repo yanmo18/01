@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //"",0,NaN,undefined,false,null都是假值，其余都是真值
+        console.log(Boolean('pink')) //true
+        console.log(Boolean('')) //false
+        console.log(Boolean(0)) //false
+        console.log(Boolean(1)) //true
+        console.log(Boolean(-1)) //true
+        console.log(Boolean(NaN)) //false
+        console.log(Boolean(undefined)) //false
+        console.log(Boolean(null)) //false
+        console.log(Boolean({})) //true
+        console.log(Boolean(false)) //false
+        console.log(Boolean(true)) //true
+        if('true'){
+            console.log('执行') //执行
+        }//假值不会执行if语句块
+    </script>
+</body>
+</html>

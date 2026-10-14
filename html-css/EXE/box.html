@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        /* div { */
+            /* width: 200px; 盒子宽度 */
+            /* height: 100px; 盒子高度 */
+            /* background-color: rgb(161, 4, 239); 背景颜色 */
+            /* padding: 20px 10px; 内边距，内容与盒子边缘，padding多值写法，上右下左，上左右下 */
+            /* border: 5px solid black; 边框样式，solid实线，dashed虚线,dotted点线 */
+            /* margin: 10px; 外边距，拉开两个盒子边缘，0 auto时为版心居中，但是盒子要有宽度 */
+            /* border-bottom: 0 0; 去掉下边框的下划线,单独设置某一个方向 */
+            /* box-sizing: border-box; 内减模式，不会让盒子撑大，不需要手动做减法。盒子模型，border-box包含padding和border在内的总宽度和高度 */
+            /* overflow:   hidden; 内容溢出隐藏 */
+            /*overflow: scroll; /*内容溢出滚动条*/
+            /*overflow: auto; /*内容溢出自动滚动条*/
+        /* }盒子尺寸=内容宽度+内边距+边框，padding和border会撑大盒子 */
+        /*content-box是默认值，盒子尺寸=内容宽度*/
+        .one {
+            margin: 20px; /*清除默认行间距*/
+            padding: 0; /*清除默认内边距*/
+            background-color: rgb(161, 4, 239);
+            /* 外边距-合并现象，垂直排列的兄弟元素，上下margin合并,娶两个中的最大值生效 */
+
+        }
+        .two{
+            margin: 56px; /*清除默认行间距*/
+            padding: 20px; /*清除默认内边距*/
+            background-color: rgb(240, 102, 4);
+            /* 外边距-合并现象，垂直排列的兄弟元素，上下margin合并,娶两个中的最大值生效 */
+        }
+        .father{
+            width: 
+            200px; /*盒子宽度*/
+            height: 100px; /*盒子高度*/ 
+            background-color: rgb(4, 239, 161);
+            /* border-top: 1px solid black; 边框样式，solid实线，dashed虚线,dotted点线 */
+            /* overflow: hidden;溢出隐藏 */
+            /* padding-top: 50px; */
+            /* box-sizing: border-box; 内减模式，不会让盒子撑大，不需要手动做减法 */
+        }
+        .son {
+            width: 10px; /*盒子宽度*/
+            height: 20px; /*盒子高度*/
+            background-color: rgb(239, 4, 4);
+            margin-top: 50px; /*外边距-塌陷问题，取消子集margin,父级设置padding */
+            /* padding: 20px; 父级设置padding */
+        }
+        span{
+        line-height: 100px; /*行内元素行高，行内元素默认行高是1.2倍字体大小，设置为100px后，行内元素高度就变成100px了*/
+            /* 行内元素行高，行内元素默认行高是1.2倍
+            margin: 20px 0; /*行内元素加垂直内外边距 */
+            padding: 10px; /*行内元素加垂直内外边距 */
+            background-color: rgb(4, 161, 239);
+        }
+    </style>
+</head>
+<body>  
+    <div class="one">
+        <p>外边距，拉开两个盒子边缘，0</p>
+        </div>
+    <div class="two+">
+        盒子模型
+    </div>
+
+
+    <div class="father">
+    <div class="son">
+         <!-- <p>外边距-塌陷问题
+            1,取消子集margin,父级设置padding
+            2,父级设置overflow:hidden
+            3,父级设置border-top
+            4,父级设置display:flex
+         </p> -->
+son
+</div>     
+    </div>
+    <div >
+        <span>span行内元素加垂直内外边距,直接加行高line-hight</span>
+        <span>span行内元素加垂直内外边距</span>
+</body>
+</html> 

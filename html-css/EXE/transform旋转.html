@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转</title>
+    <style>
+        img{
+            width: 200px;
+            transition: all 2s;
+        }
+        img:hover{
+            transform: rotate(45deg);
+            /* 旋转45度 */
+            /* transform: rotate(-45deg); */
+            /* 逆时针旋转45度 */
+            /* transform: rotate(0.25turn); */
+            /* 旋转1/4圈 */
+            /* transform: rotate(180grad); */
+            /* 旋转180梯度 */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+            /* 多个变形函数一起使用，顺序不能变，先旋转，再缩放，最后平移 */
+            /* transform: rotate(45deg) scale(1.5) translate(100px,100px); */
+            /* 设置变形的中心点，默认是中心点，可以通过百分比和具体像素值来设置 */
+</style>
+            </head>
+<body>
+    <div>
+        <img src="./img/rotate.png" alt="">
+    </div>
+</body>
+</html>

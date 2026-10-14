@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        // a = a + 1; //普通赋值运算符
+        a += 1; //复合赋值运算符
+        console.log(a); // 11
+        let i = 1;
+        console.log(i++ + ++i + 1); // 7
+        console.log(i++ + 2); //3, 结果为3，i后置自增，先参与运算后自增
+        console.log(++i + 2); //4，结果为4，i前置自增，先自增后参与运算
+
+    </script>
+</body>
+</html>

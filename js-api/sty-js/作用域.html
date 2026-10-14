@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数内部变量没有声明，直接赋值，变为全局变量
+        function foo() {
+            a = 10; // a 未声明，变为全局变量
+        }
+        console.log(a);//返回10
+
+        function fun(x,y){
+            //形参可以看作是函数局部变量
+            console.log(x)
+        }
+        fun(2,4)
+        console.log(x)//错误x只在函数内部有效，外部无法访问
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        table tr:not(:first-child):hover {
+            /* NOT除了第一行 */
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>学生信息</h2>
+    <p>将数据渲染到页面中...</p>
+
+    <table>
+        <caption>学生列表</caption>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>成绩</th>
+        </tr>
+       
+       <script>
+        //数据准备
+let students=[
+            {name:'张三',age:18,score:90,gender:'男'},
+            {name:'李四',age:19,score:80,gender:'女'},
+            {name:'王五',age:20,score:70,gender:'男'},
+            {name:'赵六',age:21,score:60,gender:'女'},
+        ];
+        //渲染页面，遍历数组对象
+        for(let i=0;i<students.lenght;i++){
+            document.write(`
+            <tr>
+            <td>${i+1}</td>
+            <td>${students[i].name}</td>
+            <td>${students[i].age}</td>
+            <td>${students[i].gender}</td>
+            <td>${students[i].score}</td>
+        </tr>
+            `)
+        }
+       </script>
+    </table>
+</body>
+
+</html>

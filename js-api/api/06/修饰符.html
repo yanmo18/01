@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // i,g是全局标志，i是忽略大小写
+        console.log(/^a*/i.test('aa'));//true
+        console.log(/^a*/i.test('Aa'));//true
+        console.log(/^a*/g.test('AaA'));//true
+        // 全局标志g，会从左到右匹配所有符合条件的字符，直到字符串结束  
+        // replace，替换所有匹配的字符  
+        const str='heoll world oll'
+        console.log(str.replace(/oll/gi,'qian'))//将oll替换为qian，i忽略大小写,g替换所有匹配的字符会替换两个,结果为
+        // heqian world qian
+        console.log(str.replace(/l|o/gi,'换'))//将l或o替换为换，结果为
+        //he换换换 w换r换d 换换换
+
+
+
+
+     
+    </script>
+</body>
+</html>

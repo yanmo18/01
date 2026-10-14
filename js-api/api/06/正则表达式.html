@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const tr='wmjfighn前端hnsiuf'
+        // 正则表达式使用
+        // 1.定义规则
+        const reg=/前端/
+        // 2.检测规则是否匹配
+        console.log(reg.test(tr));
+        // 检索规则匹配的字符串
+        // 如果有匹配的字符串，返回一个数组，如果没有匹配到，则返回null
+       console.log(reg.exec(tr));
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        console.log(/n/.test('n'))//true
+        console.log(/n/.test('nn'))//true
+        console.log(/n/.test('an'))//true
+        // ^$ 匹配开头结尾
+        console.log(/^n/.test('n'))//true
+        console.log(/^n/.test('nn'))//true
+        console.log(/^n/.test('an'))//flase
+
+        console.log(/n$/.test('n'))//true
+        console.log(/n$/.test('nn'))//true
+        console.log(/n$/.test('na'))//false
+        // 精确匹配 ^$ 
+        console.log(/^n$/.test('n'))//true
+        console.log(/^n$/.test('nn'))//false
+        console.log(/^n$/.test('na'))//false
+        console.log(/^n$/.test(''))//false
+        // * + ? 匹配前面的元素零次或多次， + 匹配一次或多次，? 匹配零次或一次
+        // *匹配0，more
+        console.log(/^n*$/.test('n'))//true
+        console.log(/^n*$/.test('nn'))//true
+        console.log(/^n*$/.test('na'))//false
+        console.log(/^n*$/.test(''))//true
+        console.log(/^n*$/.test('nan'))//false,只能是匹配的^n$中间的n 元素出现次数
+        // +匹配1，more
+        console.log(/^n+$/.test('n'))//true
+        console.log(/^n+$/.test('nn'))//true
+        console.log(/^n+$/.test('na'))//false
+        console.log(/^n+$/.test('nan'))//false,只能是匹配的^n$中间的n 元素出现次数
+        console.log(/^n+$/.test(''))//false +要>=1次
+        // ?匹配0，1次
+        console.log(/^n?$/.test('n'))//true
+        console.log(/^n?$/.test('nn'))//false
+        console.log(/^n?$/.test('na'))//false
+        console.log(/^n?$/.test('nan'))//false
+        console.log(/^n?$/.test(''))//true
+        // {n} 匹配前面的元素n出现n次
+        console.log(/^n{3}$/.test('n'))//false
+        console.log(/^n{3}$/.test('nn'))//false
+        console.log(/^n{3}$/.test('nnn'))//true
+        // {n,}匹配重复>=n次
+        console.log(/^n{3,}$/.test('n'))//false
+        console.log(/^n{3,}$/.test('nn'))//false
+        console.log(/^n{3,}$/.test('nnn'))//true
+        console.log(/^n{3,}$/.test('nnnn'))//true
+        console.log(/^n{3,}$/.test('nan'))//false
+        // {n,m} >=n && <=m匹配前面的元素n出现n到m次,在，左右不能有空格
+        console.log(/^n{3,}$/.test('n'))//false
+        console.log(/^n{3,}$/.test('nn'))//false
+        console.log(/^n{3,}$/.test('nnn'))//true
+        console.log(/^n{3,}$/.test('nan'))//false
+        console.log(/^n{3,5}$/.test('nnn'))//true
+
+        // 字符类[] 匹配方括号内的任意字符
+        // [abc] 匹配a或b或c,只能是其中一个,两个会报错
+        console.log(/^[abc]$/.test('a'))//true
+        console.log(/^[abc]$/.test('b'))//true
+        console.log(/^[abc]$/.test('ab'))//false
+        console.log(/^[abc]{2}$/.test('ab'))//true
+        console.log(/^[abc]{3}$/.test('acb'))//true
+        console.log(/^[abc]{3}$/.test('aaa'))//true
+        // [a-z] 匹配a到z,只能是其中一个,两个会报错
+        console.log(/^[a-z]$/.test('a'))//true
+        console.log(/^[a-z]$/.test('z'))//true
+        console.log(/^[a-z]$/.test('az'))//false
+        console.log(/^[a-zA-Z0-9]{2}$/.test('az'))//true
+        console.log(/^[a-zA-Z0-9]{3}$/.test('aS9'))//true
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <script>
+        const textarea=document.querySelector('textarea')
+        textarea.addEventListener('keydown',function(e){
+            if(e.key==='Enter'){
+                alert(textarea.value.trim())
+                // alert(textarea.value.trim()==='')两种写法效果一样
+                
+            }
+        })
+        // const str='    g uiwye      '
+        // alert(str.trim())
+    </script>
+</body>
+</html>

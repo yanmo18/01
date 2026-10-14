@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(x,y){
+            x=x||0
+            y=y||0
+            alert(x+y)
+        }
+        let age = 18
+        alert(false&&age++)
+        alert(age)//age++不执行，仍未18
+        alert(true||age++)
+        alert(age)//age++不执行，现为18，前面一真则真不执行后面
+        alert(12||23)//都是假返回最后一个真值
+    </script>
+</body>
+</html>

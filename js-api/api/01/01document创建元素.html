@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">导航</div>
+    <div id="main">主要内容</div>
+    <script>
+        const text=document.createElement('p');//创建p元素
+        var content=document.createTextNode('这是一个段落');//创建文本节点，创建标签内的文本内容
+        text.appendChild(content);//把文本节点添加到p元素中
+        var id=document.createAttribute('id');//创建属性节点
+        id.value='textId';//设置属性节点的值,给属性名id赋值
+        text.setAttributeNode(id);//把属性节点添加到p元素中,
+        console.log(text);
+        var main=document.getElementById('main');//获取id为main的元素
+        main.appendChild(text);//把创建的p元素添加到main元素中
+        //main元素中就有了p元素和文本内容,创建元素的完整过程，先创建元素节点createElement，再创建文本节点createTextNode和属性节点createAttribute，给属性节点赋值，最后把文本节点appendChild和属性节点setAttributeNode添加到元素节点中，最后把元素节点添加到页面中的某个元素(使用getElementById获取id为main的元素,appendChild)中.
+        //appendChild是添加子节点，setAttributeNode是添加属性节点
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            /* linear: 线性匀速 */
+            animation: change 1s linear;
+            /* steps: 分段,分步动画，工作中配合精灵图实现精灵动画 */
+             animation: change 1s steps(2); /* 精灵图动画 */
+             /* 两个时间一动画时长，2延时 */
+             animation: change 1s 2s;
+             /* infinite: 无限循环 播放2次*/
+              animation: change 1s infinite;
+            animation: change 1s 2; /* 播放2次 */
+             /* alternate: 交替播放 正向反向交替播放 */
+             animation:change 1s infinite alternate;
+             /* 动画执行完毕状态，forwards结束状态 backwards开始状态(默认) */
+             animation:change 1s forwards;
+             animation:change 1s backwards;
+        }
+        /* @keyframes change {
+            from {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 0;
+            }   
+            to {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                border-radius: 50%;
+            }
+        } */
+        @keyframes change {
+            0% {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 0;
+            }
+            25% {
+                width: 200px;
+                height: 100px;
+                background-color: yellow;
+                border-radius: 0;
+            }
+            50% {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                border-radius: 50%;
+            }
+            75% {
+                width: 100px;
+                height: 200px;
+                background-color: green;
+                border-radius: 50%;
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

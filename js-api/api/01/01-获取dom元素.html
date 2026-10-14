@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    width:200px;
+    height:200px;
+}
+</style>
+<body>
+    <div class="box">234 </div>
+    <div class="box">890</div>
+    <p id="nav">导航栏</p>
+    <ul class="nav">
+    <li>2</li>
+    <li>5</li>
+    <li>7</li>
+    <li>8</li>
+    </ul>
+    <script>
+        //1获取匹配第一个元素
+        // const box=document.querySelector('.box')
+        // const box=document.querySelector('div')
+        // const nav=document.querySelector('#nav')
+        // nav.style.color='red'
+        // 直接修改样式，可以直接修改标签的样式
+        // 获取第一个小ulli
+        // const li =document.querySelector('ul li:first-child')
+        // 选择所有小li
+        // const lis=document.querySelectorAll('ul li')
+        // 2获取所有匹配的元素
+
+        //获取元素
+        const lis=document.querySelectorAll('.nav li')
+        for(let i=0;i<lis.length;i++){
+            console.log(lis[i])//每一个小li对象
+        }
+        const p=document.querySelectorAll('#nav')
+        //获取一个元素也是伪数组，不可以直接修改样式
+        // console.log(p)
+        //p[0].style.color='red'，需要通过下标获取元素对象，再修改样式
+        // //删除数组.splic(起止位置，删除个数)，添加数组.splice(起始位置，删除个数，添加元素)
+        // let arr=['red','green']
+        // arr.splice(1,0,'pink','green')
+        // alert(arr)
+    </script>
+</body>
+</html>

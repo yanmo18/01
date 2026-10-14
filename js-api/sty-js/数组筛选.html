@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//         // 声明新空数组
+//         let newArr = []
+//         // 遍历原数组
+//         for(let i =0; i < arr.length; i++) {
+//             // 满足条件时，将元素添加到新数组中
+//             if(arr[i] >=5){
+//                 newArr.push(arr[i])
+//             }
+//         }
+// console.log(newArr);
+
+// 去零
+let arr = [1, 0, 2, 3, 0, 4, 5];
+// 声明新空数组
+let newArr = [];
+// 遍历原数组
+for (let i = 0; i < arr.length; i++) {
+    // 满足条件时，将元素添加到新数组中
+    if (arr[i] !== 0) {
+        newArr.push(arr[i]);
+    }
+}
+console.log(newArr);
+    </script>
+</body>
+</html>

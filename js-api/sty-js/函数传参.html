@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getSum(start, end) {//end=50
+            //形参，形式上的参数
+            //console.log(end);
+            let sum = 0
+            for (let i = start; i <= end; i++) {//i=1
+                sum += i
+            }
+            console.log(sum)
+        }
+        getSum(1, 50)//调用函数，实参，实际上的参数
+        getSum(30, 100)
+
+        function getSum2(x = 0, y = 0) {//默认参数，如果调用时没有传递实参，就用默认值代替
+            //没有默认值的话并且没有传递实参，结果是undefined+undefined=NaN
+
+            let sum = 0;
+            for (let i = x; i <= y; i++) {
+                sum += i;
+            }
+            console.log(sum)
+        }
+        getSum2(10, 20)
+        getSum2();
+        let x = +prompt("请输入起始值")//+将字符串转换为数字
+        let y = +prompt("请输入结束值")
+        getSum2(x, y)//实参可以是变量
+        getSum2(x)//如果只传递一个实参，另外一个默认参数就用它的默认值
+
+    </script>
+</body>
+</html>

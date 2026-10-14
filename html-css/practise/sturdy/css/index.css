@@ -1,0 +1,391 @@
+/* 首页样式 */
+/* 版心 */
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+}
+body{
+    background-color: #f3f5f7;
+}
+/* 头部区域 */
+.header {
+    height:100px;
+    /* 不设置会默认100%宽度 */
+    background-color: #fff;
+}
+.header .wrapper {
+    display: flex;
+    padding-top: 29px;
+    /* 版心距离上边的距离 */
+}
+/* 头部区域-logo */
+.logo a {
+    display: block;
+    width:195px;
+    height: 41px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+/* 头部区域-导航 */
+.nav{
+    margin-left: 102px;
+}
+.nav ul {
+    display: flex;
+}
+.nav li {
+    margin-right: 24px;
+}
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+.nav li .active,
+.nav li a:hover{
+border-bottom: 2px solid #00a4ff;
+/* 并集选择器，active类选择器，表示默认选中 */
+}
+/* 头部区域-搜索 */
+.search{
+    display: flex;
+    width:412px ;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f3f5f7;
+    padding-left: 19px;
+    padding-right: 12px;
+    margin-left: 64px;
+    /* 减去导航的内外边距，8,24 */
+}
+.search input{
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    /* 透明 */
+    outline: none;
+    /* 去掉焦点框 */
+}
+.search input::placeholder{
+    font-size: 14px;
+    color:#999;
+}
+/* 此时父级为flex布局，子级不需要进行转换display，都已经变为弹性盒子 */
+.search a{
+    align-self: center;
+    /* 侧轴居中 */
+    width:16px;
+    height: 16px;
+    background-image:url(../images/search.png) ;
+}
+/* 头部区域-用户 */
+.user {
+    margin-left: 32px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+.user img{
+    margin-right: 7px;
+    vertical-align: middle;
+    /* vertical-align:middle处理行内块和行内垂直方向对齐方式 */
+}
+.user span{
+font-size:16px;
+color: #666;
+height: 23px;
+}
+/* banner */
+.banner{
+    background-color: #0092cb;
+    height: 420px;
+}
+.banner .wrapper{
+    display: flex;
+    height: 420px;
+    justify-content: space-between;
+    background-image: url(../uploads/banner.png);
+}
+/* 侧导航区域 */
+.banner .left{
+    padding: 3px 20px;
+    width: 191px;
+    height: 420px;
+    background-color: #005576;
+}
+.banner .left a{
+    /* 块级，子级宽度是父级的100% */
+    display: block;
+    background: url(../images/right.png) no-repeat right center;
+    height: 40px;
+    line-height: 46px;
+    font-size: 16px;
+    color:#fff;
+    text-indent: 20px;
+    /* 控制文字缩进，向右缩进 */
+}
+.banner .left a:hover{
+    background-image: url(../images/right-hover.png);
+    color: #00a4ff;
+}
+/* 课程表 */
+.banner .right{
+    margin-top: 60px;
+    width: 218px;
+    height: 305px;
+    background-color: #209dd5;
+    border-radius: 10px;
+}
+.banner .right h3{
+    height: 48px;
+    line-height: 21px;
+    font-size: 15px;
+    color:#fff;
+    font-weight: 400;
+    margin-left:14px;
+    padding-top: 18px;
+}
+.banner .right .content{
+    height: 257px;
+    padding:14px;
+    font-size: 14px;
+   background-color: #fff;
+    border-radius: 10px;
+}
+.banner .right .content dl{
+    border-bottom: 1px solid #fffdfd;
+    margin-bottom: 12px;
+}
+.banner .right .content dt{
+    height: 17px;
+    width: 190px;
+    line-height: 17px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.banner .right .content dd{
+    height: 17px;
+    width: 190px;
+    margin-bottom: 8px;
+    line-height: 17px;
+    font-size: 12px;
+}
+.banner .right .content dd span{
+color: #00a4ff;
+}
+.banner .right .content dd strong{
+    color: #7d7d7d;
+    font-weight: 400;
+}
+.banner .right a{
+display: block;
+padding: 6px 67px;
+width: 190px;
+height: 32px;
+text-align: center;
+line-height: 20px;
+font-size: 14px;
+color: #fff;
+background-color:#00a4ff ;
+border-radius: 15px;
+}
+/* 精品推荐recommend */
+.recommend {
+    display: flex;
+    margin-top: 11px;
+    height: 60px;
+    width: 1200px;
+    padding: 18px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 0px 
+		rgba(211, 211, 211, 0.5);
+}
+.recommend h3{
+    font-size: 18px;
+    color: #00a4ff;
+    font-weight: 400;
+}
+.recommend ul {
+    /* 除去标题和修改兴趣的尺寸，父级剩余尺寸都给ul，实际把修改兴趣挤到右边 */
+    display: flex;
+    flex:1;
+}
+.recommend ul li a {
+    font-size: 18px;
+    padding: 0 24px;
+    border-radius: 4px;
+    border-right: 1px solid #e0e0e0;
+}
+.recommend ul li:last-child a {
+    border-right: none;
+}
+.recommend ul li a:hover {
+    background-color: #00a4ff;
+    color: #fff;
+}
+.recommend .modify {
+    font-size: 16px;
+    color: #00a4ff;
+}
+/* 推荐课程 */
+.course {
+    margin-top: 16px;
+    padding: 15px;
+}
+/* 标题，公共类，与其他区域共用 */
+.hd {
+    justify-content: space-between;
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+}
+.hd h3 {
+    font-size: 21px;
+    color: #333;
+    font-weight: 400;
+}
+.hd .more {
+    font-size: 14px;
+    color: #999;
+    background-image: url(../images/more.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+    /* 用内边距20，将文字挤到左侧，留出空余 */
+}
+/* 内容，公共类 */
+.bd ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bd li{
+    width: 228px;
+    height: 271px;
+      margin-bottom: 14px;
+      background-color: #999;
+}
+.bd li .pic{
+    height: 156px;
+
+}
+.bd li .text{
+    background-color: #fff;
+    height: 115px;
+    padding: 20px;
+}
+.bd li .text h4{
+    margin-bottom: 13px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+.bd li .text p{
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+}
+.bd li .text p span{
+    color: #fa6400;
+}
+.bd li .text p i{
+   font-style: normal;
+}
+/* 前端部分 ,python,ai公共*/
+.hd ul {
+    display: flex;
+}
+.hd li{
+    margin-right: 60px;
+    font-size: 16px;
+    color: #333;
+}
+.hd li .active{
+    color: #00a4ff;
+}
+.bd{
+    display: flex;
+    justify-content: space-between;
+}
+.bd .left{
+    width: 228px;
+}
+.bd .right{
+    width: 957px;
+    background-color: #f5f5f5;
+}
+.bd .right .top{
+    height: 100px;
+    margin-bottom: 15px;
+}
+.bd .right .bottom{
+    background-color: #f5f5f5;
+}
+.bd ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* 换行 */
+    justify-content: space-between;
+    width: 100%; /* 确保父容器宽度足够 ,可以使布局生效*/
+}
+/* footer */
+.footer {
+    margin-top: 60px;
+    padding-top: 60px;
+    height: 273px;
+    background-color: #fff;
+}
+.footer .wrapper{
+     display: flex;
+     justify-content: space-between;
+}
+.footer .left{
+    width:432px;
+    height:148px;
+}
+.footer .left img{
+    width: 195px;
+    height: 41px;
+}
+.footer .left p{
+    font-size: 12px;
+    color: #666;
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 14px;
+}
+.footer .left .download{
+    display: block;
+    width: 120px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 34px;
+   border: solid 1px #00a4ff;
+   color: #0092cb;
+   text-align: center;
+}
+.footer .right{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .right dl {
+    height: 151px;
+    width: auto;
+    margin-left:130px ;
+}
+.footer .right dl dt{
+     width: 80px;
+    height: 23px;
+    font-size: 16px;
+    line-height: 23px;
+}
+.footer .right a{
+    font-size: 14px;
+    color: #7d7d7d;
+    line-height: 24px;
+}

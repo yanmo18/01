@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*相对定位
+         1.改变位置的参照物是自己原来的位置 
+         2.不脱标，占位，元素仍然占据原来的空间
+         3.标签显示模式特点，不变，还是块级
+        */
+        /* 绝对定位
+        子级绝对定位，父级相对定位（子级父相），两个搭配使用
+        1.脱标，不占位
+        2.以父级为参照物，先找已经定位的父级
+        3.如果没有定位的父级，则以body为参照物
+        4.标签显示模式特点，变为行内块，宽高生效
+        */
+        /* 定位居中
+        绝对定位，水平垂直边偏移50%，子级向左上移动自身尺寸一半
+        */
+        .news {
+            position: absolute; /* 绝对定位 */
+            top: 0;
+            left: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* position: relative; 相对定位 */
+            position: absolute; /* 绝对定位 */
+
+            top: 50px; /* 向下移动50px */
+            left: 100px; /* 向右移动100px */
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <span>uiuerfh</span>
+        <h4>iufher</h4>
+    </div>
+</body>
+</html>

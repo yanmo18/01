@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[1,2,3,4,5]
+        // 利用解构进行赋值
+        const[max,min,avg]=[100,50,40]
+        // const max=arr[0]
+        // const min=arr[1]
+        // const avg=arr[2]
+        console.log(max)//输出100
+
+        // eg交互两个变量
+        let a=10
+        let b=20;//必须加; 
+        [a,b]=[b,a]
+        console.log(a)//输出20
+        console.log(b)//输出10
+
+        // 加；原因
+        // 1.当一行代码以[或(开头时，JavaScript引擎会将其解析为数组字面量或函数调用，而不是解构赋值。
+        // 2.如果没有分号，JavaScript引擎会将两行代码合并在一起，导致语法错误。
+        const arr1=[1,2,3]
+        const str='hello'
+        arr1.map(function(item){
+            console.log(item)//item中map会自动传入每个元素，会组成一个新数组返回
+        })
+
+        const arr2=[1,2,3,4];//必须加;
+        [1,2,3,4].map(function(e){
+            console.log(e)
+        })
+
+        // const pc=['哈哈哈','嘻嘻嘻','嘿嘿嘿']
+        // const [a1,a2,a3]=pc
+        const [a1,a2,a3]=['哈哈哈','嘻嘻嘻','嘿嘿嘿']
+        // const [a1,a2,a3]=pc;
+        // [a1,a2,a3]=['哈哈哈','嘻嘻嘻','嘿嘿嘿']
+        // 将最大值最小值函数返回值解构max和min两个变量
+        function getValue(){
+            return [100,50]
+        }
+        const [max1,min1]=getValue()
+        console.log(max1)//输出100
+        console.log(min1)//输出50
+        // 变量多，单元值少
+        const [a111,b1,c,d,e,f]=[1,2,3]
+        console.log(a111)//输出1
+        console.log(b1)//输出2
+        console.log(c)//输出3   
+        console.log(d)//输出undefined
+
+        // 变量少，单元值多
+        const [as,v,bs,...rest]=[1,2,3,4,5,6]
+        console.log(as)
+        console.log(v)
+        console.log(bs)
+        console.log(rest)//会输出一个真数组
+
+        // 默认值
+        const [aa='mm',cc='默认值']=['哈哈哈']
+        console.log(aa)//输出哈哈哈
+        console.log(cc)//输出默认值
+
+        // 忽略某些值，按需导入
+        const [a11,,a33]=[1,2,3]
+        console.log(a11)//输出1
+        console.log(a33)//输出3
+
+        // 多维数组解构
+        const arr3=[[1,2],[3,4],3,4];
+        const [[w,r],[fq,y],s,t]=arr3
+        console.log(w,r,f,y,s,t)//输出1,2,3,4,3,4
+    </script>
+</body>
+</html>
